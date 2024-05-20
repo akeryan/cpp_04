@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:24:50 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 17:45:30 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:24:58 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ const Dog &Dog::operator=(const Dog &obj)
 Dog::Dog(const Dog &obj): Animal(obj)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
+}
+
+void Dog::makeSound(void) const
+{
+	std::cout << "Woof..." << std::endl;
 }

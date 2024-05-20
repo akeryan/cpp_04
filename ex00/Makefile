@@ -6,7 +6,7 @@
 #    By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 14:39:51 by akeryan           #+#    #+#              #
-#    Updated: 2024/05/17 12:47:02 by akeryan          ###   ########.fr        #
+#    Updated: 2024/05/20 18:25:49 by akeryan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,15 +17,13 @@ CXX = c++
 RM = rm -rf
 
 SRC_FILES = main.cpp		\
-			ClapTrap.cpp	\
-			ScavTrap.cpp	\
-			FragTrap.cpp	\
-			DiamondTrap.cpp	
+			Animal.cpp	\
+			Dog.cpp	\
+			Cat.cpp	
 
-INCLUDE_FILES = ClapTrap.hpp	\
-				ScavTrap.hpp	\
-				FragTrap.hpp	\
-				DiamondTrap.hpp	
+INCLUDE_FILES = Animal.hpp	\
+				Dog.hpp	\
+				Cat.hpp	
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC_FILES))
 

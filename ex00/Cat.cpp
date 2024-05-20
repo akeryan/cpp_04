@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:47:49 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 17:49:20 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:23:57 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ const Cat &Cat::operator=(const Cat &obj)
 Cat::Cat(const Cat &obj): Animal(obj)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
+}
+
+void Cat::makeSound(void) const
+{
+	std::cout << "Meow..." << std::endl;
 }

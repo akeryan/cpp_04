@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:46:38 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 17:47:24 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/20 18:22:55 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Cat: public Animal
 		~Cat();
 		Cat(const Cat &obj);
 		const Cat &operator=(const Cat &obj);
+		void makeSound(void) const;
 };
 
 #endif

@@ -6,15 +6,16 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:09:12 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 17:36:43 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/20 19:20:10 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include <iostream>
 
-Animal::Animal(): _type("animal")
+Animal::Animal()
 {
+	this->setType("Default_animal");
 	std::cout << "Animal default constructor is called" << std::endl;
 }
 
@@ -26,7 +27,7 @@ Animal::~Animal()
 const Animal &Animal::operator=(const Animal &obj)
 {
 	if (this != &obj) {
-		this->_type = obj._type;
+		this->setType(obj.getType());
 	}
 	std::cout << "Animal copy assignment operator is called" << std::endl;
 	return *this;
@@ -41,14 +42,19 @@ Animal::Animal(const Animal &obj)
 std::string Animal::getType(void) const
 {
 	std::cout << "Animal getType() function was called" << std::endl;
-	return this->_type;
+	return this->getType();
 }
 
 void Animal::setType(const std::string type)
 {
 	if (!type.empty()) {
-		this->_type = type;
+		this->setType(type);
 	}
 	std::cout << "Animal setType() function was called" << std::endl;
+}
+
+void Animal::makeSound(void) const
+{
+	std::cout << "Default Animal sound" << std::endl;
 }
 
