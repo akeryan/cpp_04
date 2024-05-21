@@ -6,24 +6,28 @@
 #    By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 14:39:51 by akeryan           #+#    #+#              #
-#    Updated: 2024/05/20 18:25:49 by akeryan          ###   ########.fr        #
+#    Updated: 2024/05/21 19:07:53 by akeryan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = exec 
 
-CXFLAGS =  -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
+CXXFLAGS =  -fsanitize=address -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 CXX = c++
 RM = rm -rf
 
-SRC_FILES = main.cpp		\
+SRC_FILES = main.cpp	\
 			Animal.cpp	\
-			Dog.cpp	\
-			Cat.cpp	
+			Dog.cpp		\
+			Cat.cpp		\
+			WrongAnimal.cpp	\
+			WrongCat.cpp	
 
 INCLUDE_FILES = Animal.hpp	\
-				Dog.hpp	\
-				Cat.hpp	
+				Dog.hpp		\
+				Cat.hpp		\
+				WrongAnimal.hpp	\
+				WrongCat.hpp	
 
 OBJ = $(patsubst %.cpp, %.o, $(SRC_FILES))
 

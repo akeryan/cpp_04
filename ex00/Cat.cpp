@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:47:49 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 18:23:57 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/21 18:59:15 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,11 @@ Cat::Cat(const Cat &obj): Animal(obj)
 
 void Cat::makeSound(void) const
 {
-	std::cout << "Meow..." << std::endl;
+	std::cout << "Cat makeSound was called: Meow..." << std::endl;
+}
+
+std::string Cat::getType(void) const
+{
+	std::cout << "Cat getType() function was called" << std::endl;
+	return this->_type;
 }

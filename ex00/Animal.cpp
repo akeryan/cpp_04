@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:09:12 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 19:20:10 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/21 18:28:05 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ Animal::Animal(const Animal &obj)
 std::string Animal::getType(void) const
 {
 	std::cout << "Animal getType() function was called" << std::endl;
-	return this->getType();
+	return this->_type;
 }
 
 void Animal::setType(const std::string type)
 {
 	if (!type.empty()) {
-		this->setType(type);
+		this->_type = type;
 	}
 	std::cout << "Animal setType() function was called" << std::endl;
 }

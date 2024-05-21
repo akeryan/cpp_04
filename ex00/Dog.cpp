@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:24:50 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/20 18:24:58 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/21 18:58:51 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,11 @@ Dog::Dog(const Dog &obj): Animal(obj)
 
 void Dog::makeSound(void) const
 {
-	std::cout << "Woof..." << std::endl;
+	std::cout << "Dog makeSound() was called: Woof..." << std::endl;
+}
+
+std::string Dog::getType(void) const
+{
+	std::cout << "Dog getType() function was called" << std::endl;
+	return this->_type;
 }
