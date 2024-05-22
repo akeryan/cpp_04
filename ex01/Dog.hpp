@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 17:22:07 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 18:51:25 by akeryan          ###   ########.fr       */
+/*   Created: 2024/05/20 17:46:38 by akeryan           #+#    #+#             */
+/*   Updated: 2024/05/22 19:31:22 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog: public Animal
 {
@@ -23,7 +24,12 @@ class Dog: public Animal
 		Dog(const Dog &obj);
 		const Dog &operator=(const Dog &obj);
 		void makeSound(void) const;
+
+	// getters:
 		std::string getType(void) const;
+		Brain *getBrain(void) const;
+	private:
+		Brain *_brain;
 };
 
 #endif
