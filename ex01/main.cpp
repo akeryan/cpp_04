@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:53:35 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 19:15:23 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/22 17:37:12 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,34 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
 int main (void)
 {
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	const WrongAnimal *teta = new WrongAnimal();
-
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	std::cout << "i type: " << i->getType() << std::endl;
-	std::cout << "meta type: " << meta->getType() << std::endl;
-	j->makeSound();
-	meta->makeSound();
-	teta->makeSound();
-	//std::cout << "teta type: " << teta->getType() << std::endl;
-	delete meta;
-	delete j;
+	const Cat *i = new Cat();
+	const Cat *j = new Cat();
 	delete i;
-	const Dog *k = new Dog();
-	k->makeSound();
-	delete k;
-	return 0;
+	delete j;
+
+	Cat a;
+
+	a.getBrain()->addIdea("Mouuusee");
+	a.getBrain()->addIdea("Fiiiish");
+	Cat b(a);
+	a.getBrain()->addIdea("Whiskaaaas");
+	
+	std::cout << "A Idea: " << a.getBrain()->getIdea() << std::endl;
+	std::cout << "A index: " << a.getBrain()->getLastIdeaIndex() << std::endl;
+	std::cout << "A Idea: " << b.getBrain()->getIdea() << std::endl;
+
+
+
+
+	//Brain a, b;
+	//a.addIdea("Mmmmmmm");
+	//b = a;
+	//Brain c(a);
+	//a.addIdea("UUUuuuuuu");
+	//std::cout << "A idea: " << a.getIdea() << std::endl;
+	//std::cout << "B idea: " << b.getIdea() << std::endl;
+	//std::cout << "C idea: " << c.getIdea() << std::endl;
 }

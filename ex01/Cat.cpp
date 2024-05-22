@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:47:49 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/22 10:22:16 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/22 17:36:08 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ const Cat &Cat::operator=(const Cat &obj)
 {
 	if (this != &obj) {
 		Animal::operator=(obj);
-		this->_brain = obj.getBrain();
+		*this->_brain = *obj._brain;
 	}
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	return *this;	
@@ -39,7 +39,11 @@ const Cat &Cat::operator=(const Cat &obj)
 
 Cat::Cat(const Cat &obj): Animal(obj)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	if (this != &obj) {
+		std::cout << "Cat copy constructor called" << std::endl;
+		this->_brain = new Brain();	
+		*this->_brain = *obj._brain; 
+	}
 }
 
 void Cat::makeSound(void) const
