@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:11:46 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 19:20:38 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:32:55 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongAnimal
 		virtual ~WrongAnimal();
 		const WrongAnimal &operator=(const WrongAnimal &obj);
 		virtual std::string getType(void) const;
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 	protected:
 		void setType(const std::string);
 		std::string _type;

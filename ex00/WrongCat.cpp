@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:40:43 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/23 09:16:36 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:47:56 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ WrongCat::WrongCat(const WrongCat &obj): WrongAnimal(obj)
 
 void WrongCat::makeSound(void) const
 {
-	std::cout << "WrongCat makes Wrong Meow..." << std::endl;
+	std::cout << "WrongCat makes WRONG_MWOOW..." << std::endl;
 }
 
 std::string WrongCat::getType(void) const

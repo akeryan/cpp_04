@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:53:35 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/23 09:29:47 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:55:13 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,30 @@ int main (void)
 	const Animal *meta = new Animal();
 	const Animal *j = new Dog();
 	const Animal *i = new Cat();
-	const WrongAnimal *teta = new WrongAnimal();
-	const WrongAnimal *wCat = new WrongCat();
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	wCat->makeSound();
-	std::cout << "i type: " << i->getType() << std::endl;
-	std::cout << "meta type: " << meta->getType() << std::endl;
-	j->makeSound();
 	meta->makeSound();
-	teta->makeSound();
-	std::cout << "teta type: " << teta->getType() << std::endl;
-	delete meta;
-	delete wCat;
-	delete teta;
+	i->makeSound();
+	j->makeSound();
 	delete j;
 	delete i;
-	const Dog *k = new Dog();
-	k->makeSound();
-	delete k;
+	delete meta;
+	
+	const WrongAnimal *teta = new WrongAnimal();
+	const WrongAnimal *wA = new WrongCat();
+	const WrongCat	*wC = new WrongCat(); 
+	std::cout << teta->getType() << " " << std::endl;
+	std::cout << wA->getType() << " " << std::endl;
+	std::cout << wC->getType() << " " << std::endl;
+
+	teta->makeSound();
+	wA->makeSound();
+	wC->makeSound();
+
+	delete wA;
+	delete wC;
+	delete teta;
+
 	return 0;
 }

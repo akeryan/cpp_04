@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:15:06 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/23 09:14:24 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:47:22 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ void WrongAnimal::setType(const std::string type)
 
 void WrongAnimal::makeSound(void) const
 {
-	std::cout << "WrongAnimal sound" << std::endl;
+	std::cout << "WrongAnimal WRONG_SOUND" << std::endl;
 }
 

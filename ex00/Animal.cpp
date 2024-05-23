@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:09:12 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/23 09:18:12 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:42:58 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ void Animal::setType(const std::string type)
 
 void Animal::makeSound(void) const
 {
-	std::cout << "Default Animal sound" << std::endl;
+	std::cout << "Default Animal SOUND" << std::endl;
 }
 
