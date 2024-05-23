@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:47:49 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/22 17:36:08 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 10:07:53 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 Cat::Cat(): Animal()
 {
+	std::cout << "Cat default constructor is called" << std::endl;
 	this->setType("Cat");	
 	this->_brain = new Brain();
-	std::cout << "Cat default constructor is called" << std::endl;
 }
 
 Cat::~Cat()
@@ -39,8 +39,8 @@ const Cat &Cat::operator=(const Cat &obj)
 
 Cat::Cat(const Cat &obj): Animal(obj)
 {
+	std::cout << "Cat copy constructor called" << std::endl;
 	if (this != &obj) {
-		std::cout << "Cat copy constructor called" << std::endl;
 		this->_brain = new Brain();	
 		*this->_brain = *obj._brain; 
 	}
