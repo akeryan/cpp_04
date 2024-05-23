@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:40:43 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 19:10:40 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:16:36 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 WrongCat::WrongCat(): WrongAnimal()
 {
-	this->setType("WrongCat");	
 	std::cout << "WrongCat default constructor is called" << std::endl;
+	this->setType("WrongCat");	
 }
 
 WrongCat::~WrongCat()
@@ -26,9 +26,9 @@ WrongCat::~WrongCat()
 
 const WrongCat &WrongCat::operator=(const WrongCat &obj)
 {
+	std::cout << "WrongCat copy assignment operator called" << std::endl;
 	if (this != &obj)
 		WrongAnimal::operator=(obj);
-	std::cout << "WrongCat copy assignment operator called" << std::endl;
 	return *this;	
 }
 

@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:24:50 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 18:58:51 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:18:44 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 Dog::Dog(): Animal()
 {
-	this->setType("Dog");	
 	std::cout << "Dog default constructor is called" << std::endl;
+	this->setType("Dog");	
 }
 
 Dog::~Dog()
@@ -26,9 +26,9 @@ Dog::~Dog()
 
 const Dog &Dog::operator=(const Dog &obj)
 {
+	std::cout << "Dog copy assignment operator called" << std::endl;
 	if (this != &obj)
 		Animal::operator=(obj);
-	std::cout << "Dog copy assignment operator called" << std::endl;
 	return *this;	
 }
 

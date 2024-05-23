@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:09:12 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 18:28:05 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:18:12 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ Animal::~Animal()
 
 const Animal &Animal::operator=(const Animal &obj)
 {
+	std::cout << "Animal copy assignment operator is called" << std::endl;
 	if (this != &obj) {
 		this->setType(obj.getType());
 	}
-	std::cout << "Animal copy assignment operator is called" << std::endl;
 	return *this;
 }
 
 Animal::Animal(const Animal &obj)
 {
-	*this = obj;
 	std::cout << "Animal copy constructor is called" << std::endl;
+	*this = obj;
 }
 
 std::string Animal::getType(void) const
@@ -47,10 +47,10 @@ std::string Animal::getType(void) const
 
 void Animal::setType(const std::string type)
 {
+	std::cout << "Animal setType() function was called" << std::endl;
 	if (!type.empty()) {
 		this->_type = type;
 	}
-	std::cout << "Animal setType() function was called" << std::endl;
 }
 
 void Animal::makeSound(void) const

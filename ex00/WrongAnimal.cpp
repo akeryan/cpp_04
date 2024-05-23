@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 18:15:06 by akeryan           #+#    #+#             */
-/*   Updated: 2024/05/21 19:06:46 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/05/23 09:14:24 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 WrongAnimal::WrongAnimal()
 {
-	this->setType("Default_animal");
 	std::cout << "WrongAnimal default constructor is called" << std::endl;
+	this->setType("Wrong_Default_animal");
 }
 
 WrongAnimal::~WrongAnimal()
@@ -26,17 +26,17 @@ WrongAnimal::~WrongAnimal()
 
 const WrongAnimal &WrongAnimal::operator=(const WrongAnimal &obj)
 {
+	std::cout << "WrongAnimal copy assignment operator is called" << std::endl;
 	if (this != &obj) {
 		this->setType(obj.getType());
 	}
-	std::cout << "WrongAnimal copy assignment operator is called" << std::endl;
 	return *this;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &obj)
 {
-	*this = obj;
 	std::cout << "WrongAnimal copy constructor is called" << std::endl;
+	*this = obj;
 }
 
 std::string WrongAnimal::getType(void) const
@@ -47,14 +47,14 @@ std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::setType(const std::string type)
 {
-	if (!type.empty()) {
-		this->setType(type);
-	}
 	std::cout << "WrongAnimal setType() function was called" << std::endl;
+	if (!type.empty()) {
+		this->_type = type;
+	}
 }
 
 void WrongAnimal::makeSound(void) const
 {
-	std::cout << "Default WrongAnimal sound" << std::endl;
+	std::cout << "WrongAnimal sound" << std::endl;
 }
 
